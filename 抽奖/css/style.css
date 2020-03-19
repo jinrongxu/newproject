@@ -1,0 +1,27 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#bg {
+    width: 650px;
+    height: 600px;
+    margin: 0 auto;
+    background: url('../image/bg.jpg') no-repeat;
+    position: relative;
+}
+
+#point {
+    position: absolute;
+    z-index: 10;
+    top: 155px;
+    left: 247px;
+}
+
+#gift {
+    position: absolute;
+    z-index: 5;
+    top: 60px;
+    left: 116px;
+    transition: all 4s;
+}

@@ -1,0 +1,113 @@
+@import "./_minix.scss";
+@import "./common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background: url(../img/kim.jpg) no-repeat;
+    background-size: 100% 100%;
+    filter: blur(pxTorem(5px));
+}
+
+.rotate {
+    width: pxTorem(200px);
+    height: pxTorem(200px);
+    position: absolute;
+    margin-left: pxTorem(-100px);
+    margin-top: pxTorem(-200px);
+    top: 60%;
+    left: 50%;
+    border-radius: 50%;
+    border: pxTorem(20px) solid rgba(255, 255, 255, .2);
+    animation: run 1s linear infinite;
+    .rotate-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: url(../img/kim.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    &.active {
+        animation-play-state: paused;
+    }
+}
+
+.program {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 75%;
+    height: pxTorem(10px);
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    color: brown;
+    .center {
+        width: 75%;
+        height: pxTorem(3px);
+        background: #aaa;
+        position: relative;
+        .center-con {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: pxTorem(3px);
+            background: red;
+        }
+        .center-point {
+            position: absolute;
+            width: pxTorem(10px);
+            height: pxTorem(10px);
+            background: #fff;
+            border-radius: 50%;
+            right: 0;
+            top: -6px;
+        }
+    }
+}
+
+.btn {
+    width: 100%;
+    position: absolute;
+    height: pxTorem(50px);
+    display: flex;
+    justify-content: space-evenly;
+    bottom: pxTorem(70px);
+    span {
+        height: pxTorem(50px);
+        width: pxTorem(50px);
+        display: inline-block;
+    }
+    .prev {
+        background: url(../img/z.png);
+        background-size: 100% 100%;
+    }
+    .play {
+        background: url(../img/zanting.png);
+        background-size: 100% 100%;
+        &.active {
+            background: url(../img/jieshu.png);
+            background-size: 100% 100%;
+        }
+    }
+    .next {
+        background: url(../img/y.png);
+        background-size: 100% 100%;
+    }
+}
+
+@keyframes run {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

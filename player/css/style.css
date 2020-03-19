@@ -1,0 +1,306 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font-family: STHeitiSC-Light;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+ins,
+a {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: inline-block;
+}
+
+input,
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+  -o-tap-highlight-color: transparent;
+}
+
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background: url(../img/kim.jpg) no-repeat;
+  background-size: 100% 100%;
+  filter: blur(0.13333rem);
+}
+
+.rotate {
+  width: 5.33333rem;
+  height: 5.33333rem;
+  position: absolute;
+  margin-left: -2.66667rem;
+  margin-top: -5.33333rem;
+  top: 60%;
+  left: 50%;
+  border-radius: 50%;
+  border: 0.53333rem solid rgba(255, 255, 255, 0.2);
+  animation: run 1s linear infinite;
+}
+
+.rotate .rotate-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: url(../img/kim.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.rotate.active {
+  animation-play-state: paused;
+}
+
+.program {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 75%;
+  height: 0.26667rem;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color: brown;
+}
+
+.program .center {
+  width: 75%;
+  height: 0.08rem;
+  background: #aaa;
+  position: relative;
+}
+
+.program .center .center-con {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0.08rem;
+  background: red;
+}
+
+.program .center .center-point {
+  position: absolute;
+  width: 0.26667rem;
+  height: 0.26667rem;
+  background: #fff;
+  border-radius: 50%;
+  right: 0;
+  top: -6px;
+}
+
+.btn {
+  width: 100%;
+  position: absolute;
+  height: 1.33333rem;
+  display: flex;
+  justify-content: space-evenly;
+  bottom: 1.86667rem;
+}
+
+.btn span {
+  height: 1.33333rem;
+  width: 1.33333rem;
+  display: inline-block;
+}
+
+.btn .prev {
+  background: url(../img/z.png);
+  background-size: 100% 100%;
+}
+
+.btn .play {
+  background: url(../img/zanting.png);
+  background-size: 100% 100%;
+}
+
+.btn .play.active {
+  background: url(../img/jieshu.png);
+  background-size: 100% 100%;
+}
+
+.btn .next {
+  background: url(../img/y.png);
+  background-size: 100% 100%;
+}
+
+@keyframes run {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

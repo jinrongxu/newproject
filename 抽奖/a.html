@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+ 2 <html lang="en">
+ 3 <head>
+ 4   <meta charset="UTF-8">
+ 5   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+ 6   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 7   <title>测试视频标签</title>
+ 8   <style>
+ 9     .container{
+10       width: 100%;
+11       margin: 0 auto;
+12       border: 1px solid #f00;
+13       text-align: center;
+14     }
+15     video,embed,iframe{
+16       border: 1px solid #000;
+17       width: 100%;
+18     }
+19   </style>
+20 </head>
+21 <body>
+22   <div class="container">
+23     <h1>video标签--只支持mp4格式</h1>
+24     <video src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" autoplay="autoplay" controls="controls" loop="-1" poster="false.png">
+25     </video>
+26     <h1>embed标签--不支持移动端</h1>
+27     <embed src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+28     <h1>iframe标签--全支持</h1>
+29     <iframe frameborder="0" src="https://v.qq.com/iframe/player.html?vid=i0670jbe37a&tiny=0" allowfullscreen></iframe>
+30   </div>
+31 </body>
+32 </html>
